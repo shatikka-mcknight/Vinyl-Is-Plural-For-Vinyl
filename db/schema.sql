@@ -2,3 +2,12 @@ DROP DATABASE IF EXISTS vinyl_db;
 
 CREATE DATABASE vinyl_db;
 
+USE vinyl_db;
+
+CREATE TABLE USER (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR (100) NOT NULL,
+    email VARCHAR (100) NOT NULL,
+    password 
+
+)
