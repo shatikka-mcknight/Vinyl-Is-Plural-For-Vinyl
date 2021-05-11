@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS vinyl_db;
+
+CREATE DATABASE vinyl_db;
+
+
+
