@@ -38,6 +38,9 @@ Record.init(
         thumb:{
             type: DataTypes.STRING,
             allowNull: false
+        },
+        condition: {
+            type: DataTypes.INTEGER
         }
 
 
