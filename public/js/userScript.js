@@ -1,0 +1,1 @@
+//script for buy/sell query
