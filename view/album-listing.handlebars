@@ -1,0 +1,83 @@
+<div class="row mb-4 project">
+  <div>
+    <div class="pageContainer">
+      <div class="col-auto">
+        <h2>Welcome, {{user_name}}!</h2>
+      </div>
+    </div>
+
+    <div class="pageContainer">
+      <div>
+        <input class="form-control float" type="search" placeholder="Search for Record"></input>
+        <button class="btn" type="submit">Search</button>
+      </div>
+    </div>
+  </div>
+  <!--Search Results Begins -->
+<div class="pageContainer">
+  <div class="float container2 card">
+    <p>Showing Search Results...</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#ID</th>
+          <th scope="col">Label</th>
+          <th scope="col">Catalog</th>
+          <th scope="col">Year</th>
+          <th scope="col">Condition</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>New</td>
+          <td>$29.00</td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>New</td>
+          <td>$29.00</td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>New</td>
+          <td>$29.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ <!-- Search Results Ends--> 
+<!-- Preview Listing Begin-->
+  <div>
+    <div class="container2 card justify-content-center">
+      <div class="albumPreview">
+        <img src="https://via.placeholder.com/200">
+      </div>
+      <div class=" center">
+        <div>
+          <p>Label: {{title}} </p>
+          <p>Catalog: {{user_name}}</p>
+          <p>Year: {{year}}</p>
+          <p>Condition: {{????}}</p>
+          <p>Item Description from Seller: {{user_description}} </p>
+          <p>Seller: {{user_name}}</p>
+          <!--<p>Location: </p>-->
+        </div>
+        <div >
+          <button class="btn">Request Contact Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
