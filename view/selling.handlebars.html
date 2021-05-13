@@ -1,3 +1,4 @@
+{{#if logged_In}}
 <!--Search for Record Begin-->
 <div>
   <div class="row">
@@ -63,3 +64,6 @@
 <!-- Posting Listing End-->
 
 <script src="./js/profile.js"></script>
+{{else}}
+<a href="/login">You must login to sell albums.</a>
+{{/if}}
