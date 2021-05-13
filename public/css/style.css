@@ -1,3 +1,57 @@
-float {
-    float: left;
+
+body {
+    margin: 0;
+    background-image: url("C:\Users\Shatikka Mcknight\Desktop\BootCamp-Course\Project_2\Vinyl-Is-Plural-For-Vinyl\public\images\kevin-mccutcheon-TcSckNRL9J8-unsplash.jpg");
+  }
+
+  #container {
+      width: 1024px;
+  }
+ 
+.navBtn {
+    color: #000000;
+    border: none;
+}
+
+nav {
+    float: right;
+    margin-top: -40px;;
+    font-size: 18px;
+    
+}
+nav a{
+    color: #000000;
+    margin-top: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+nav button {
+    float: right;
+    color: #000000;
+    background-color: ;
+    margin-top: -10px;
+    padding-left: 15px;;
+}
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+.header {
+    padding: 40px;
+    background: #1abc9c;
+  }
+  
+.title a {
+    text-align: left;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
 }
