@@ -3,6 +3,8 @@
     "disconnect": "^1.2.2",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.7",
     "sequelize": "^6.6.2"
   }
 }
