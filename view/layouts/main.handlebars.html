@@ -5,32 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vinyl  is Plural for Vinyl</title>
-  <link rel="stylesheet" href="">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="C:\Users\Shatikka Mcknight\Desktop\BootCamp-Course\Project_2\Vinyl-Is-Plural-For-Vinyl\public\css\style.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="">
-    <header class="">
-      <h1>
+  <div>
+    <header class="header">
+      <div class="container">
+      <h1 class="title">
         <a href="/">Vinyl  is Plural for Vinyl</a>
       </h1>
-      <nav>
-        <button>Home</button>
-        <button>Favorites</button>
-        <button>Buy/Search</button>
-        <button>Sell</button>
-        {{#if logged_in}}
-          <button><a href="/user-profile">Account</button>
-          <button class="" id="">Logout</button>
-         {{else}}
-          <button><a href="/login">login</a></button>
-        {{/if}}
+      <nav >
+        <a href="/user-profile" class="navBtn">Home</a>
+        <a href="/user-profile" class="navBtn">Favorites</a>
+        <a href="/user-profile" class="navBtn">Buy/Search</a>
+        <a href="/user-profile" class="navBtn">Sell</a>
+        <!--{{#if logged_in}}-->
+        <a href="/user-profile"  id="account" class="navBtn">Account</a>
+        <a href="/user-profile" id="logout" class="navBtn">Logout</a>
+         <!--{{else}}-->
+        <a href="/login" class="navBtn">login</a>
+        <!--{{/if}}-->
       </nav>
+    </div>
     </header>
     <main >
       <!-- Render the sub layout -->
-      {{{ body }}}
+      <!--{{{ body }}}-->
+      
+      <!-- Render the sub layout -->
     </main>
     <footer>
       
