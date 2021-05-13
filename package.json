@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "disconnect": "^1.2.2",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
     "sequelize": "^6.6.2"
   }
 }

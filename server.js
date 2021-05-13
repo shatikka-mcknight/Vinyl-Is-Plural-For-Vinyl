@@ -13,6 +13,6 @@ var db = new Discogs({
     consumerSecret: process.env.ConsumerSecret
 }).database();
 console.log(db)
-console.log(db.search({artist}).then(data => console.log(data)))
+console.log(db.search({artist:"Beachwood Sparks"}).then(data => console.log(data)))
 const PORT = process.env.PORT || 5000
 app.listen(PORT, console.log(`Server is running on port ${PORT}`))
