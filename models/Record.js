@@ -24,8 +24,8 @@ Record.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        barcode:{
-            type: DataTypes.ARRAY(DataTypes.STRING),
+        catno:{
+            type: DataTypes.STRING,
             allowNull: false
 
         },
