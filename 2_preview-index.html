@@ -69,13 +69,80 @@
         <!--Website Description Ends-->
       
       <!--User login Begin-->
-        <div>
-         <div class="container3 justify-content-center card">
-             {{Buying/Favorites Saved}}
-         </div>
-         <div class="container3 justify-content-center card">
-             {{Selling/Listing}}
-         </div>
+      <div class="container-fluid">
+        <div class="container3 justify-content-center card">
+          <!-- buy -->
+       {{#if objs}}
+           <table class="table">
+               <thead>
+               <tr>
+                   <th scope="col">Album Title</th>
+                   <th scope="col">Catalog</th>
+                   <th scope="col">Year</th>
+                   <!--<th scope="col">Condition</th>
+                   <th scope="col">Price</th>-->
+               </tr>
+               </thead>
+               <tbody>
+               {{#each objs}}
+                   <tr>
+                       <td>{{this.title}}</td>
+                       <td>{{this.Catalog}}</td>
+                       <td>{{this.Year}}</td>
+                       <!--<td>{{this.Condition}}</td>
+                       <td>{{this.price}}</td>-->
+                   </tr>
+     
+               {{/each}}
+               </tbody>
+           </table>
+     
+       {{else}}
+           <div class="row">
+               <div class="col-md-12">
+                       <h3>
+                           You have no saved buying/favorites.
+                       </h3>
+               </div>
+           </div>
+       {{/if}}
+        </div>
+        <div class="container3 justify-content-center card">
+            {{#if objs}}
+       <table class="table">
+           <thead>
+           <tr>
+               <th scope="col">Album Title</th>
+               <th scope="col">Catalog</th>
+               <th scope="col">Year</th>
+               <!--<th scope="col">Condition</th>
+               <th scope="col">Price</th>-->
+           </tr>
+           </thead>
+           <tbody>
+           {{#each objs}}
+               <tr>
+                   <td>{{this.title}}</td>
+                   <td>{{this.Catalog}}</td>
+                   <td>{{this.Year}}</td>
+                   <!--<td>{{this.Condition}}</td>
+                   <td>{{this.price}}</td>-->
+               </tr>
+     
+           {{/each}}
+           </tbody>
+       </table>
+     
+       {{else}}
+           <div class="row">
+               <div class="col-md-12">
+                       <h3>
+                           You haven't listed any records for sale.
+                       </h3>
+               </div>
+           </div>
+     
+       {{/if}}
         </div>
         <!--User login Ends-->
       </div>
