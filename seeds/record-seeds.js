@@ -7,7 +7,7 @@ const recordData = [
         title: "Yeah Man",
         format: ["LP"],
         year: "1977",
-        barcode: ["123456789"],
+        catno: "123456789",
         country: "USA",
         thumb: ""
     },
@@ -16,7 +16,7 @@ const recordData = [
         title: "Yeah Bro",
         format: ["LP"],
         year: "1979",
-        barcode: ["23456789"],
+        catno: "23456789",
         country: "USA",
         thumb: ""
 
@@ -26,7 +26,7 @@ const recordData = [
         title: "Yeah Bruh",
         format: ["LP"],
         year: "1980",
-        barcode: ["3456789"],
+        catno: "3456789",
         country: "USA",
         thumb: ""
 
