@@ -7,7 +7,7 @@ var spotifyApi = new SpotifyWebApi({
   redirectUri: 'http://localhost:8888/callback'
 });
 
-spotifyApi.setAccessToken('BQBHDHvIJEcuYnVTV-7dwp03_5fZTVce7FjxmbGF7MZum2y4utu8Ne786pgdY1qb3AqPuDdFloAfnpM0umQ');
+spotifyApi.setAccessToken('BQAHIJCNRVQdLuLB_Jh-VoGfIQsdCk34hgEsI5L-VZUfQ28F4itceW8SpUoQeLWMARIrtFcLJ74FXq8cSGU');
   
   // Retrieve an access token.
   spotifyApi.clientCredentialsGrant().then(
@@ -24,12 +24,12 @@ spotifyApi.setAccessToken('BQBHDHvIJEcuYnVTV-7dwp03_5fZTVce7FjxmbGF7MZum2y4utu8N
   );
 
 // Search tracks whose artist's name contains 'Kendrick Lamar', and track name contains 'Alright'
-spotifyApi.searchTracks('track:Hello artist:Lionel Richie')
-  .then(function(data) {
-    console.log('Search tracks by "Hello" in the track name and "Lionel Richie" in the artist name', data.body);
-  }, function(err) {
-    console.log('Something went wrong!', err);
-  });
+// spotifyApi.searchTracks('track:Lose Yourself artist:Eminem')
+//   .then(function(data) {
+//     console.log('Search tracks by "Hello" in the track name and "Lionel Richie" in the artist name', data.body);
+//   }, function(err) {
+//     console.log('Something went wrong!', err);
+//   });
 
   // Get tracks in an album
 spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
@@ -38,4 +38,14 @@ spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
 }, function(err) {
   console.log('Something went wrong!', err);
 });
+
+// spotifyApi.getAlbum('Hello')
+//   .then(function(data) {
+//     console.log('Album information', data.body);
+//     result.innerHTML = "<img src='images/heads.png' alt='heads' />";
+    
+//   }, function(err) {
+//     console.error(err);
+//   });
+
 
