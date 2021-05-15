@@ -10,7 +10,7 @@ Record.init(
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true
+          
         },
         title:{
             type: DataTypes.STRING,

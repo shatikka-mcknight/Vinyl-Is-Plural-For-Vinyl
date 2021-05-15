@@ -4,7 +4,7 @@ const sequelize= require ('../config/connection');
 const collectionData = [
     {
         id: 1,
-        collection_id: 1
+
       
     },
     // {
@@ -13,9 +13,9 @@ const collectionData = [
     
 ]
 
-const seedCollection = async () => {
-    await sequelize.sync({force: true})
-    Collection.bulkCreate(collectionData);
-}
+// const seedCollection = async () => {
+//     await sequelize.sync({force: true})
+   const seedCollection= ()=> Collection.bulkCreate(collectionData);
+
 module.exports = seedCollection;
-seedCollection();
+// seedCollection();
