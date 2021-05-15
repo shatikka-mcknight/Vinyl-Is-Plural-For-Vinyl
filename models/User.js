@@ -12,9 +12,13 @@ User.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      // references:{
+      //   model: 'collection',
+      //   key: 'id'
+      
     },
      username: {
       type: DataTypes.STRING,
