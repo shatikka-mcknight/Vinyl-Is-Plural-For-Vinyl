@@ -17,7 +17,7 @@ Record.init(
             allowNull: false
         },
         format:{
-            type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.STRING,
             allowNull: false
         },
         year:{
@@ -41,17 +41,16 @@ Record.init(
         },
         condition: {
             type: DataTypes.INTEGER
+        },
+        collection_id:{
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'collection',
+            key: 'collection_id'
+
+
         }
-
-
-
-
-
-       
-
-
-
-
+    },
 
     },
     {
