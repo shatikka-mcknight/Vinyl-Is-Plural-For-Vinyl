@@ -21,11 +21,15 @@
       <div class="float container2 card">
         <h3>Create New Listing:</h3>
         <form class="form">
-          <div class="dataForm" id="userPrice">
-            <input type="text" placeholder="User Input Price" />
+
+          <div class="dataForm" >
+            <input type="text" placeholder="User Input Price" id="listingName"/>
           </div>
-          <div class="dataForm" id="albumCondition">
-            <label for="user-login">User Condition</label>
+          <div class="dataForm" >
+            <input type="text" placeholder="User Input Price" id="userPrice"/>
+          </div>
+          <div class="dataForm" >
+            <label for="user-login" id="albumCondition">User Condition</label>
             <div class="">
               <input class="" type="radio" name="exampleRadios"  value="option1" checked>
               <label class="option" for="">
@@ -48,11 +52,11 @@
           <div class="dataForm" id="albumYear">
             <input type="text" placeholder="User Year"/>
           </div>
-          <div class="dataForm" id="userDescr">
-            <textarea rows="3" cols="40" placeholder="Description"></textarea>
+          <div class="dataForm" >
+            <textarea rows="3" cols="40" placeholder="Description" id="userDescr"></textarea>
           </div>
           <div class="dataForm">
-            <button type="submit" class="btn">Preview Listing</button>
+            <button type="submit" class="btn" id="previewListing">Preview Listing</button>
           </div>
         </form>
       </div>
