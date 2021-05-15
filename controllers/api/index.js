@@ -1,12 +1,12 @@
-const Collection = require('./Collection');
-const Record = require('./Record.js');
-const User = require('./User.js');
+const Collection = require('../../models/Collection');
+const Record = require('../../models/Record');
+const User = require('../../models/User');
 
 Collection.hasMany(Record, {
-    foreignKey: 'barcode'
+    foreignKey: 'catno'
 });
 
-Collection.belongsto(User, {
+Collection.belongsTo(User, {
     foreignKey: 'id',
 });
 

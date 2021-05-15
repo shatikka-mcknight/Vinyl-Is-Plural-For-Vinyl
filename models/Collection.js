@@ -7,12 +7,12 @@ class Collection extends Model {}
 Collection.init(
     {
         
-        user_id:{
+        id:{
             type: DataTypes.INTEGER,
             allowNull: false,
             references:{
                 model: 'user',
-                key: 'id'
+                  key:'id'
             }
         },
         
@@ -20,10 +20,8 @@ Collection.init(
            type: DataTypes.INTEGER,
            allowNull: false,
            autoIncrement: true,
-           references:{
-               model: 'record',
-               key: 'catno'
-               
+           primaryKey: true
+         
            }
            
 
@@ -32,20 +30,7 @@ Collection.init(
       
         
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-    },
+    
     {
         sequelize,
         freezeTableName: true,

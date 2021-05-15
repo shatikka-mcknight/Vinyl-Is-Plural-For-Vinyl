@@ -3,12 +3,12 @@ const Record = require('./Record');
 const Collection = require('./Collection');
 
 User.hasMany(Collection, {
-    foreignKey: 'user_id',
+    foreignKey: 'id',
     onDelete: 'CASCADE'
 });
 
-Collection.belongsTo(User,{
-    foreignKey: 'user_id'
+Collection.belongsTo(User, {
+    foreignKey: 'id'
 });
 
 module.exports = {
