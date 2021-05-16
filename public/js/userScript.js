@@ -3,19 +3,23 @@
 const albumConditionButton = async function(event){
     event.preventDefault();
 
-    const ele = document.getElementsByName('condition').value;
 
-    const response = await fetch(,{
+    const conditionElement = document.getElementsByName('condition').value;
+
+await fetch('/api/post',{
         method: 'POST',
         body: JSON.stringify({
-            condition: ele.value
+            conditionElement
+
             
         }),
         headers:{ 'Content-Type': 'application/json'},
     });
     document.location.reload();
         
-    }
+
+    };
+
     document.querySelector('#conditionButton')
     .addEventListener('click', albumConditionButton)
 
