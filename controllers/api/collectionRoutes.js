@@ -42,7 +42,7 @@ router.get('/collection/:id', async (req, res) => {
         const records = dbCollectionData.map((record) => 
             record.get({ plain: true})
         );
-        res.render('[***ADD PAGE ***', {
+        res.render('user-profile', {
             records,
         });
     } catch (err) {
@@ -50,3 +50,5 @@ router.get('/collection/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+module.exports = router;
