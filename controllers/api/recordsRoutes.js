@@ -1,4 +1,12 @@
 const router = require('express').Router();
+const Discogs = require('disconnect').Client
+
+var db = new Discogs({
+    consumerKey: process.env.ConsumerKey,
+    consumerSecret: process.env.ConsumerSecret
+}).database();
+console.log(db);
+
 const { Collection, Record, User } = require('../../models');
 //add record to DB
 router.post('/record/add', async (req, res) => {

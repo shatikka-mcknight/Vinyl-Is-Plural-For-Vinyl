@@ -32,3 +32,4 @@ const searchButtonHandler = async function(event){
 }
 document.querySelector('#search-form')
 addEventListener('submit', searchButtonHandler);
+
