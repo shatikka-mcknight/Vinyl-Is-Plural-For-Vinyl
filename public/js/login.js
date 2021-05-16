@@ -47,8 +47,10 @@ const accountUpdate = async (event) => {
   const username = document.querySelector('#newUser').value.trim();
   const email = document.querySelector('#newEmail').value.trim();
   const password = document.querySelector('#newPass').value.trim();
+  const confirmpass = document.querySelector('#confirmPass').value.trim();
 
-  if (username && email && password) {
+
+  if (username && email && (password===confirmpass)) {
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
