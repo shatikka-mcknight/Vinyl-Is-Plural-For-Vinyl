@@ -31,7 +31,7 @@
           <div class="dataForm" >
             <label for="user-login" id="albumCondition">User Condition</label>
             <div class="">
-              <input class="" type="radio" name="exampleRadios"  value="option1" checked>
+              {{!-- <input class="" type="radio" name="exampleRadios"  value="option1" checked>
               <label class="option" for="">
                 New Album
               </label>
@@ -48,7 +48,18 @@
                 Bad Condition
               </label>
             </div>
+          </div> --}}
+          <div id= "conditionButton">
+            <input type="radio" id="mint" name="condition" value="mint">
+            <label for="mint">Mint to Near-Mint</label><br>
+            <input type="radio" id="very-good" name="condition" value="very-good">
+            <label for="very-good">Very Good</label><br>
+            <input type="radio" id="fair-poor" name="condition" value="fair-poor">
+            <label for="fair-poor">Fair to Poor</label>
+            <br>
+            <button type="button"></button>
           </div>
+
           <div class="dataForm" id="albumYear">
             <input type="text" placeholder="User Year"/>
           </div>
@@ -87,4 +98,5 @@
   <!-- Posting Listing End-->
   </div>
   
-  <script src="./js/profile.js"></script>
+  <script src="./js/userScript.js"></script>
+    <script src="./js/search.js"></script>
