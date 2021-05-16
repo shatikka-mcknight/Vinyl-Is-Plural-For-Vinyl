@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Collection, Record, User } = require('../../models');
-
 //ADD to collection
 router.post('/collection/add/', async (req, res) => {
     try {
@@ -14,7 +13,6 @@ router.post('/collection/add/', async (req, res) => {
         res.status(500).json(err);
     }
 });
- 
 //GET all members of a collection
 router.get('/collection/:id', async (req, res) => {
     try {
@@ -34,7 +32,6 @@ router.get('/collection/:id', async (req, res) => {
                         'country',
                         'thumb',
                         'condition'
-
                     ],
                 },
             ],
@@ -42,7 +39,7 @@ router.get('/collection/:id', async (req, res) => {
         const records = dbCollectionData.map((record) => 
             record.get({ plain: true})
         );
-        res.render('user-profile', {
+        res.render('[***ADD PAGE ***', {
             records,
         });
     } catch (err) {
@@ -50,5 +47,3 @@ router.get('/collection/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-module.exports = router;

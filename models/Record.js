@@ -10,22 +10,22 @@ Record.init(
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true
+          
         },
         title:{
             type: DataTypes.STRING,
             allowNull: false
         },
         format:{
-            type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.STRING,
             allowNull: false
         },
         year:{
             type: DataTypes.STRING,
             allowNull: false
         },
-        barcode:{
-            type: DataTypes.ARRAY(DataTypes.STRING),
+        catno:{
+            type: DataTypes.STRING,
             allowNull: false
 
         },
@@ -41,17 +41,16 @@ Record.init(
         },
         condition: {
             type: DataTypes.INTEGER
+        },
+        collection_id:{
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'collection',
+            key: 'collection_id'
+
+
         }
-
-
-
-
-
-       
-
-
-
-
+    },
 
     },
     {

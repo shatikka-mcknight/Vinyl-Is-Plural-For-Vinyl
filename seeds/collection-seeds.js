@@ -1,49 +1,21 @@
 const { Collection } = require ('../models');
+const sequelize= require ('../config/connection');
 
 const collectionData = [
     {
-        artist_id: 1,
-        title: "Yeah Man",
-        format: ["LP"],
-        year: "1977",
-        barcode: ["123456789"],
-        country: "USA",
-        thumb: "",
-        user_id: 1
-        
+        id: 1,
+
+      
     },
-    {
-        artist_id: 2,
-        title: "Yeah Bro",
-        format: ["LP"],
-        year: "1979",
-        barcode: ["23456789"],
-        country: "USA",
-        thumb: "",
-        user_id: 2
-
-
-
-        
-    },
-    {
-        artist_id: 3,
-        title: "Yeah Bruh",
-        format: ["LP"],
-        year: "1980",
-        barcode: ["3456789"],
-        country: "USA",
-        thumb: "",
-        user_id: 3
-
-
-
-
-
-
-
-    }
+    // {
+    //     collection_id: 1
+    // }
+    
 ]
 
-const seedCollection = () => Collection.bulkCreate(collectionData);
+// const seedCollection = async () => {
+//     await sequelize.sync({force: true})
+   const seedCollection= ()=> Collection.bulkCreate(collectionData);
+
 module.exports = seedCollection;
+// seedCollection();

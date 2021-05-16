@@ -1,0 +1,108 @@
+<div class="pageContainer">
+  <!--Website Description Begin-->
+  <div class="float container2 justify-content-center card">
+
+    <h2>Welcome {{username}}!</h2>
+
+    <!--Website Description Ends-->
+
+    <button id="modal-btn"> Edit Account Information </button>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <form class="editUser">
+          <label for="fname">New Username</label><br>
+          <input type="text" id="newUser" name="fname" value=""><br>
+          <label for="fname">New Email</label><br>
+          <input type="text" id="newEmail" name="fname" value=""><br>
+          <label for="lname">New Password</label><br>
+          <input type="text" id="newPass" name="lname" value=""><br>
+          <label for="fname">Confirm New Password</label><br>
+          <input type="text" id="confirmPass" name="fname" value=""><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+
+    <!--User login Begin-->
+    <div class="container-fluid">
+      <div class="container3 justify-content-center card">
+        <!-- buy -->
+        {{#if objs}}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Album Title</th>
+              <th scope="col">Catalog</th>
+              <th scope="col">Year</th>
+              <!--<th scope="col">Condition</th>
+                   <th scope="col">Price</th>-->
+            </tr>
+          </thead>
+          <tbody>
+            {{#each objs}}
+            <tr>
+              <td>{{this.title}}</td>
+              <td>{{this.Catalog}}</td>
+              <td>{{this.Year}}</td>
+              <!--<td>{{this.Condition}}</td>
+                       <td>{{this.price}}</td>-->
+            </tr>
+
+            {{/each}}
+          </tbody>
+        </table>
+
+        {{else}}
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              You have no saved buying/favorites.
+            </h3>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      <div class="container3 justify-content-center card">
+        {{#if objs}}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Album Title</th>
+              <th scope="col">Catalog</th>
+              <th scope="col">Year</th>
+              <!--<th scope="col">Condition</th>
+               <th scope="col">Price</th>-->
+            </tr>
+          </thead>
+          <tbody>
+            {{#each objs}}
+            <tr>
+              <td>{{this.title}}</td>
+              <td>{{this.Catalog}}</td>
+              <td>{{this.Year}}</td>
+              <!--<td>{{this.Condition}}</td>
+                   <td>{{this.price}}</td>-->
+            </tr>
+
+            {{/each}}
+          </tbody>
+        </table>
+
+        {{else}}
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              You haven't listed any records for sale.
+            </h3>
+          </div>
+        </div>
+
+        {{/if}}
+      </div>
+      <!--User login Ends-->
+    </div>
+
+    <script src="./js/login.js"></script>
+    <script src="../public/js/userprofile.js"></script>

@@ -2,14 +2,16 @@ const User = require('./User');
 const Record = require('./Record');
 const Collection = require('./Collection');
 
-User.hasMany(Collection, {
-    foreignKey: 'user_id',
+User.hasOne(Collection, {
+    foreignKey: 'id',
     onDelete: 'CASCADE'
 });
 
-Collection.belongsTo(User,{
-    foreignKey: 'user_id'
+// User.hasOne(Collection);
+Collection.belongsTo(User, {
+    foreignKey: 'id'
 });
+
 
 module.exports = {
     User,

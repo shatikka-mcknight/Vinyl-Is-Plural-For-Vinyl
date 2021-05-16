@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinyl  is Plural for Vinyl</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="C:\Users\Shatikka Mcknight\Desktop\BootCamp-Course\Project_2\Vinyl-Is-Plural-For-Vinyl\public\css\style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div>
+    <header class="header">
+      <div class="container">
+      <h1 class="title">
+        <a id="logo" href="/">
+          <img src="../album.svg"  alt="">Vinyl is Plural<br>for Vinyl
+        </a>
+      </h1>
+      <nav class="navbar" >
+        <a href="/" class="navBtn">Home</a>
+        <a href="/user-profile" class="navBtn">Favorites</a>
+        <a href="/album-listing" class="navBtn">Buy/Search</a>
+        <a href="/user-profile" class="navBtn">Sell</a>
+        <!--{{#if logged_in}}-->
+        <a href="/user-profile"  id="account" class="navBtn">Account</a>
+        <a href="/welcome" id="logout" class="navBtn">Logout</a>
+         <!--{{else}}-->
+        <a href="/login" class="navBtn">Login</a>
+        <!--{{/if}}-->
+      </nav>
+    </div>
+    </header>
+    <main >
+      <!-- Render the sub layout -->
+      <!--{{{ body }}}-->
+      <div>
+        <!--Search for Record Begin-->
+          <div>
+            <div class="pageContainer">
+              <div class="col-auto">
+                <h2>Welcome, {{user_name}}!</h2>
+              </div>
+            </div>
+        
+            <div class="pageContainer">
+              <div>
+                <input class="form-control float" type="search" placeholder="Search for Record"></input>
+                <button class="btn" type="submit">Search</button>
+              </div>
+            </div>
+          </div>
+          <!--Search for Record End-->
+        
+          <!--Create New Listing Begin-->
+          <div class="pageContainer">
+            <div class="float container2 card">
+              <h3>Create New Listing:</h3>
+              <form class="form">
+                <div class="dataForm" id="userPrice">
+                  <input type="text" placeholder="User Input Price" />
+                </div>
+                <div class="dataForm" id="albumCondition">
+                  <label for="user-login">User Condition</label>
+                  <div class="">
+                    <input class="" type="radio" name="exampleRadios"  value="option1" checked>
+                    <label class="option" for="">
+                      New Album
+                    </label>
+                  </div>
+                  <div class="">
+                    <input  type="radio" name="exampleRadios"  value="option1" checked>
+                    <label class="option" for="">
+                      Mint Condition
+                    </label>
+                  </div>
+                  <div class="">
+                    <input class="" type="radio" name="exampleRadios"  value="option1" checked>
+                    <label class="option" for="">
+                      Bad Condition
+                    </label>
+                  </div>
+                </div>
+                <div class="dataForm" id="albumYear">
+                  <input type="text" placeholder="User Year"/>
+                </div>
+                <div class="dataForm" id="userDescr">
+                  <textarea rows="3" cols="40" placeholder="Description"></textarea>
+                </div>
+                <div class="dataForm">
+                  <button type="submit" class="btn">Preview Listing</button>
+                </div>
+              </form>
+            </div>
+          <!--Create New Listing End-->
+          <!-- Posting Listing Begin-->
+            <div>
+              <div class="container2 card justify-content-center">
+                <div class="albumPreview">
+                  <img src="https://via.placeholder.com/200">
+                </div>
+                <iframe src="https://open.spotify.com/embed/track/0HJQD8uqX2Bq5HVdLnd3ep" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class=" center">
+                  <div>
+                    <p>Label: {{title}} </p>
+                    <p>Catalog: {{user_name}}</p>
+                    <p>Year: {{year}}</p>
+                    <p>Condition: {{????}}</p>
+                    <p>Item Description from Seller: {{user_name}} </p>
+                    <p>Seller: {{user_name}}</p>
+                    <!--<p>Location: </p>-->
+                  </div>
+                  <div >
+                    <button class="btn">Post Listing</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Posting Listing End-->
+        </div>
+        
+        <script src="./js/profile.js"></script>
+      <!-- Render the sub layout -->
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only 
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}-->
+</body>
+
+</html>

@@ -5,30 +5,33 @@ const recordData = [
     {
         artist_id: 1,
         title: "Yeah Man",
-        format: ["LP"],
+        format: "LP",
         year: "1977",
-        barcode: ["123456789"],
+        catno: "123456789",
         country: "USA",
-        thumb: ""
+        thumb: "",
+        collection_id: 0
     },
     {
         artist_id: 2,
         title: "Yeah Bro",
-        format: ["LP"],
+        format: "LP",
         year: "1979",
-        barcode: ["23456789"],
+        catno: "23456789",
         country: "USA",
-        thumb: ""
+        thumb: "",
+        collection_id:0
 
     },
     {
         artist_id: 3,
         title: "Yeah Bruh",
-        format: ["LP"],
+        format: "LP",
         year: "1980",
-        barcode: ["3456789"],
+        catno: "3456789",
         country: "USA",
-        thumb: ""
+        thumb: "",
+        collection_id:0
 
 
     

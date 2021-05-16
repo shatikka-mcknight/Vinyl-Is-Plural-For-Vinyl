@@ -1,0 +1,102 @@
+<div>
+  <!--Search for Record Begin-->
+    <div>
+      <div class="pageContainer">
+        <div class="col-auto">
+          <h2>Welcome, {{user_name}}!</h2>
+        </div>
+      </div>
+  
+      <div class="pageContainer">
+        <div>
+          <input class="form-control float" type="search" placeholder="Search for Record"></input>
+          <button id="search-form" class="btn" type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+    <!--Search for Record End-->
+  
+    <!--Create New Listing Begin-->
+    <div class="pageContainer">
+      <div class="float container2 card">
+        <h3>Create New Listing:</h3>
+        <form class="form">
+
+          <div class="dataForm" >
+            <input type="text" placeholder="User Input Price" id="listingName"/>
+          </div>
+          <div class="dataForm" >
+            <input type="text" placeholder="User Input Price" id="userPrice"/>
+          </div>
+          <div class="dataForm" >
+            <label for="user-login" id="albumCondition">User Condition</label>
+            <div class="">
+              {{!-- <input class="" type="radio" name="exampleRadios"  value="option1" checked>
+              <label class="option" for="">
+                New Album
+              </label>
+            </div>
+            <div class="">
+              <input  type="radio" name="exampleRadios"  value="option1" checked>
+              <label class="option" for="">
+                Mint Condition
+              </label>
+            </div>
+            <div class="">
+              <input class="" type="radio" name="exampleRadios"  value="option1" checked>
+              <label class="option" for="">
+                Bad Condition
+              </label>
+            </div>
+          </div> --}}
+          <div id= "conditionButton">
+            <input type="radio" id="mint" name="condition" value="mint">
+            <label for="mint">Mint to Near-Mint</label><br>
+            <input type="radio" id="very-good" name="condition" value="very-good">
+            <label for="very-good">Very Good</label><br>
+            <input type="radio" id="fair-poor" name="condition" value="fair-poor">
+            <label for="fair-poor">Fair to Poor</label>
+            <br>
+            <button type="button"></button>
+          </div>
+
+          <div class="dataForm" id="albumYear">
+            <input type="text" placeholder="User Year"/>
+          </div>
+          <div class="dataForm" >
+            <textarea rows="3" cols="40" placeholder="Description" id="userDescr"></textarea>
+          </div>
+          <div class="dataForm">
+            <button type="submit" class="btn" id="previewListing">Preview Listing</button>
+          </div>
+        </form>
+      </div>
+    <!--Create New Listing End-->
+    <!-- Posting Listing Begin-->
+      <div>
+        <div class="container2 card justify-content-center">
+          <div class="albumPreview">
+            <img src="https://via.placeholder.com/200">
+          </div>
+          <div class=" center">
+            <div>
+              <p>Label: {{title}} </p>
+              <p>Catalog: {{user_name}}</p>
+              <p>Year: {{year}}</p>
+              <p>Condition: {{????}}</p>
+              <p>Item Description from Seller: {{user_name}} </p>
+              <p>Seller: {{user_name}}</p>
+              <!--<p>Location: </p>-->
+            </div>
+            <div >
+              <button class="btn">Post Listing</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Posting Listing End-->
+  </div>
+  
+  <script src="./js/userScript.js"></script>
+    <script src="./js/search.js"></script>
