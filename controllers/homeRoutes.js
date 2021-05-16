@@ -80,3 +80,36 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
+//const { Collection, Record } = require('../models');
+
+// GET all galleries for homepage
+//router.get('/', async (req, res) => {
+   //res.render('welcome');
+
+});
+    
+// router.get('/', async (req, res) => {
+//    res.render('user-profile');
+
+// });
+    
+// router.get('/', async (req, res) => {
+//    res.render('account-creation');
+
+// });
+    
+// router.get('/', async (req, res) => {
+//    res.render('album-listing');
+
+//     });
+
+// router.get('/', async (req, res) => {
+//       res.render('selling');
+   
+// });
+
+    //module.exports = router;

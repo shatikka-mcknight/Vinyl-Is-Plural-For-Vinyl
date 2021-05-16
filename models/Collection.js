@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
+const User = require('./User');
 
 const sequelize = require('../config/connection.js');
 
@@ -7,23 +8,21 @@ class Collection extends Model {}
 Collection.init(
     {
         
-        user_id:{
+        id:{
             type: DataTypes.INTEGER,
-            allowNull: false,
+            // allowNull: false,
             references:{
                 model: 'user',
-                key: 'id'
+                  key:'id'
             }
         },
         
        collection_id:{
            type: DataTypes.INTEGER,
-           allowNull: false,
+        //    allowNull: false,
            autoIncrement: true,
-           references:{
-               model: 'record',
-               key: 'catno'
-               
+           primaryKey: true
+         
            }
            
 
@@ -32,20 +31,7 @@ Collection.init(
       
         
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-    },
+    
     {
         sequelize,
         freezeTableName: true,

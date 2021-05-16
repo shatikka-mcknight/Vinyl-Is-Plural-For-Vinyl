@@ -8,7 +8,7 @@ var db = new Discogs({
 console.log(db)
 console.log(db.search({artist:"Beachwood Sparks"}).then(data => console.log(data)));
 
-Discogs.getArtist('artist', 'artist_id').then(
+    Discogs.getArtist().then(
     function(data){
         console.log(data.body);
     },function(err){
