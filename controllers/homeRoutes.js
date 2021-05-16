@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Collection, Record } = require('../model');
+const { Collection, Record } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
