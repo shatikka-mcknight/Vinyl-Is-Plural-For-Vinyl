@@ -75,4 +75,4 @@ document
 
 document
   .querySelector('.editUser')
-  .addEventListener('submit', signupFormHandler);
+  .addEventListener('submit', accountUpdate);
