@@ -11,3 +11,14 @@ Collection.belongsTo(User, {
 });
 
 module.exports = {Collection, Record, User};
+
+const router = require('express').Router();
+const userRoutes = require('./userRoutes');
+const recordsRoutes = require('./recordsRoutes');
+const collectionRoutes = require('./collectionRoutes');
+
+router.use('/users', userRoutes);
+router.use('/records', recordsRoutes);
+router.use('/collectionRoutes', collectionRoutes);
+
+module.exports = router;
