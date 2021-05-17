@@ -1,7 +1,7 @@
 
 body {
     margin: 0 auto;
-    background-image: url("C:/Users/Shatikka Mcknight/Desktop/BootCamp-Course/Project_2/Vinyl-Is-Plural-For-Vinyl/public/images/vinyl-backround.jpg");
+    background-image: url("..\public\images\vinyl-backround.jpg");
     background-size: 100%;
     max-width: none;
     color:#ffffff;
