@@ -24,18 +24,14 @@
       </h1>
       <nav class="navbar" >
         <a href="/" class="navBtn">Home</a>
-        <a href="/user-profile" class="navBtn">Favorites</a>
-
+        {{!-- <a href="/user-profile" class="navBtn">Favorites</a> --}}
+        {{!-- Render login/logout through condition --}}
+        {{#if loggedIn}}
         <a href="/album-listing" class="navBtn">Buy/Search</a>
-
-        <a href="/user-profile" class="navBtn">Sell</a>
-        <!--{{#if logged_in}}-->
+        <a href="/selling" class="navBtn">Sell</a>
         <a href="/user-profile"  id="account" class="navBtn">Account</a>
-        <a href="/welcome" id="logout" class="navBtn">Logout</a>
-         <!--{{else}}-->
-
-        <a href="/album-listing" class="navBtn">Login</a>
-        <!--{{/if}}-->
+        <button id="logout" class="navBtn">Logout</a>
+        {{/if}}
       </nav>
     </div>
     </header>
@@ -51,7 +47,7 @@
   </div>
 
   <!--Render script for logged in users only -->
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>

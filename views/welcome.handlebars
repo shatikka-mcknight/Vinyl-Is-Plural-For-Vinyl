@@ -1,9 +1,11 @@
 <div class="pageContainer">
   <div class="float container2 card">
     <!--Website Description Begin-->
-    <div class="text-center " >
-        <h2>Website Description</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <div class="text-center ">
+      <h2>Website Description</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book.</p>
     </div>
     <!--Website Description Ends-->
 
@@ -16,31 +18,32 @@
       </div>
     </div>
     <!-- End Album Carousel Display-->
-</div>
+  </div>
 
-<!--User login Begin-->
+  <!--User login Begin-->
   <div class="float container2 justify-content-center card">
     <h2>Welcome!</h2>
-    <form >
+
+    <form class="form login-form">
+
       <div class="dataForm">
-        <label for="user-login" id="username-signup">Username</label>
-        <br>
-        <input type="text" id="email-login" />
-      </div>
-      <div class="dataForm">
-        <label for="password-login">Password:</label><br>
-        <input  type="password" id="password-login" />
-      </div>
-      <div class="dataForm btn-outline-success">
-        <button type="submit" class="login-form">Log In</button>
+        <label for="email-login">Email</label>
+        <input class="form-input" type="text" id="email-login" />
       </div>
 
-      <div class="dataForm btn-outline-success signup-form">
-        <button type="submit">Need an Account?</button>
+      <div class="dataForm">
+        <label for="password-login">Password</label>
+        <input class="form-input" type="password" id="password-login" />
       </div>
-    </form>
+
+      <div class="dataForm btn-outline-success">
+        <button type="submit" class="btn btn-primary">Log In</button>
+      </div>
+
+      <a href="/account-creation" id="account" class="navBtn">Need an account?</a>
   </div>
-  <!--User login Ends-->
+  </form>
+</div>
+<!--User login Ends-->
 </div>
 <script src="./public/js/login.js"></script>
-<script src="./public/js/logout.js"></script>
