@@ -7,13 +7,14 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/album-listing', async (req, res) => {
+    req.session.loggedIn
    res.render('album-listing');
 });
 
 router.get('/user-profile', withAuth, async (req, res) => {
    try {
       // Find the logged in user based on the session ID
-      const userData = await User.findByPk(req.session.id, {
+      const userData = await User.findByPk(req.session.username, {
          attributes: { exclude: ['password'] },
          include: [{ model: Collection }],
       });
@@ -30,6 +31,7 @@ router.get('/user-profile', withAuth, async (req, res) => {
 
 
 router.get('/selling', async (req, res) => {
+  req.session.loggedIn
    res.render('selling');
 });
 
@@ -37,12 +39,12 @@ router.get('/account-creation', async (req, res) => {
    res.render('account-creations');
 });
 
-// router.get('/login', async (req, res) => {
-//    // If the user is already logged in, redirect the request to another route
-//    if (req.session.loggedIn) {
-//       res.redirect('/profile');
-//       return;
-//    }
+router.get('/login', async (req, res) => {
+   // If the user is already logged in, redirect the request to another route
+   if (req.session.loggedIn) {
+      res.redirect('/user-profile');
+      return;
+   }});
 // const { Collection, User } = require('../models');
 // const withAuth = require('../utils/auth');
 
